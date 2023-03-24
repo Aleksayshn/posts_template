@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect, createRef, useRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { nanoid } from 'nanoid'
 import PostService from './services/API/PostService';
 import { useFetching } from './hooks/useFetching';
