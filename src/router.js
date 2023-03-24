@@ -45,5 +45,5 @@ export const router = createBrowserRouter(
             ],
         },
     ],
-    { basename: "/posts/" }
+    { basename: "/posts_template/" }
 );
