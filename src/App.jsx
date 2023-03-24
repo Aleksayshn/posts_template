@@ -44,19 +44,30 @@ const App = () => {
 
   // useObserver(lastElement, page < totalPages, isLoading, () => {
   //   setPage(page + 1);
+  // fetchPosts(limit, page)
   // })
 
   useEffect(() => {
-    fetchPosts(limit, page);
-  }, [page, limit])
+    const fetchPosts = async () => {
+      try {
+        const response = await PostService.getPosts(limit, page);
+        setPosts(response.data);
+        const totalCountPost = response.headers['x-total-count'];
+        setTotalPages(getPageCount(totalCountPost, limit))
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchPosts(limit, page)
+  }, [page, limit]);
 
 
-  const createPost = (newPost) => {
+  function createPost(newPost) {
     setPosts([{
       ...newPost,
       id: nanoid(),
       nodeRef: createRef()
-    }, ...posts])
+    }, ...posts]);
     setModal(false);
   }
 
@@ -66,6 +77,7 @@ const App = () => {
 
   const changePage = (page) => {
     setPage(page)
+    fetchPosts(limit, page)
   }
 
   return (

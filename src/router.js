@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { HomePage } from './pages/HomePage';
 import { PostsPage } from './pages/PostsPage';
-
 import { ErrorPage } from './pages/ErrorPage';
 import { PostIdPage } from './pages/PostIdPage';
 import PostService from './services/API/PostService';
@@ -20,15 +19,13 @@ export const router = createBrowserRouter(
                     element: <HomePage />,
                 },
                 {
-                    path: '/all',
+                    path: 'all',
                     element: <PostsPage />,
-                    exact: true,
                 },
 
                 {
-                    path: '/all/:id',
+                    path: 'all/:id',
                     element: <PostIdPage />,
-                    exact: true,
                     loader: PostService.getPostById,
 
 
