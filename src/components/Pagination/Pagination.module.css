@@ -1,0 +1,15 @@
+.paginationBox {
+    display: flex;
+    gap: 2px;
+}
+
+.pageBtn {
+    padding: 5px;
+    border: 1px solid teal;
+}
+
+.pageBtn__current {
+    border: 2px solid rgb(41, 223, 74);
+    font-weight: bold;
+    background-color: #85d4eb;
+}

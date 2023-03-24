@@ -1,0 +1,12 @@
+.iframeEl {
+    position: relative;
+    top: -15px;
+    transform: rotate(25deg);
+    left: 15px;
+    margin-top: -60px;
+    margin-right: auto;
+    width: 10rem;
+    border: 0;
+    cursor: unset;
+    z-index: 0;
+}

@@ -1,0 +1,6 @@
+.goBack {
+    padding: 5px 10px;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+}

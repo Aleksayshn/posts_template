@@ -1,0 +1,14 @@
+.navItem {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10%;
+    border-radius: 10px;
+}
+
+.navItem a {
+    color: rgb(43, 43, 45);
+    padding: 5px 15px;
+    background-image: linear-gradient(315deg, #32dcc0 0%, #e0d533 90%);
+}

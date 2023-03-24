@@ -1,0 +1,8 @@
+.filterWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}

@@ -1,0 +1,9 @@
+.findInput {
+    border: 2px dotted #89d8d3;
+    height: 20px;
+}
+
+.findInput::placeholder {
+    font-style: italic;
+    color: #7c7877;
+}
